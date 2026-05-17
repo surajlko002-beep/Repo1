@@ -2,7 +2,7 @@ name: Update NSE Stocks to Google Sheet
 
 on:
   schedule:
-    # यह समय 14:45 UTC है, जिसका मतलब भारत में रात 8:15 PM है
+    # Yeh samay 14:45 UTC hai, jiska matlab Bharat mein raat 8:15 PM hai
     - cron: '45 14 * * 1-5'
   workflow_dispatch:
 
@@ -19,7 +19,8 @@ jobs:
           python-version: '3.10'
 
       - name: Install Libraries
-        run: pip install gspread oauth2client pandas requests
+        run: |
+          pip install gspread oauth2client pandas requests
 
       - name: Run Python Script
         env:
