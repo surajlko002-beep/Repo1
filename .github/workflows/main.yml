@@ -25,4 +25,5 @@ jobs:
       - name: Run Python Script
         env:
           GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
-        run: python update_sheet.py
+        # GitHub ke naye structure ke mutabik sahi rasta (Path)
+        run: python ${{ github.workspace }}/update_sheet.py
